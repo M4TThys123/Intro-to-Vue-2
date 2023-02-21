@@ -6,10 +6,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav id="nav" class="nav-bar">
+        img
+
+        <ul>
+            <li v-for="nav in navigaion">
+                <a :href="nav.url" class="nav-ancor">{{ nav.name }}</a>
+            </li>
+        </ul>
+    </nav>
+
 <div id="app">
-    <div class="product-info">
-        <h1>{{ product }}</h1>
-        <p>{{ description }}</p>
+    <div class="product">
+        <div class="product-image">
+            <img v-bind:src="image" alt="product image">
+        </div>
+
+        <div class="product-info">
+            <h1>{{ product }}</h1>
+            <div>
+                <p v-if="inventory > 10">In Stock</p>
+                <p v-else-if="inventory <= 10 && inventory > 0">Almost Sold Out!</p>
+                <p v-else>Out of stock</p>
+            </div>
+            <p v-show="inventory > 1">{{ description }}</p>
+            <ul>
+                <li v-for="detail in details">{{ detail }}</li>
+            </ul>
+            <div v-for="variant in variants">
+                <p>{{ variant.Color }}</p>
+            </div>
+        </div>
     </div>
 </div>
 
