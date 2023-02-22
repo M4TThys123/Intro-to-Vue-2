@@ -1,5 +1,33 @@
-const app = new Vue({
-    el: '#app',
+const nav = new Vue({
+    el: '#nav',
+    data: {
+        // Logo
+        logo: './assets/logo/nav_light.png',
+
+        // Nav list
+        navigaion: [
+            {
+                url: '/',
+                name: 'Home'
+            },
+            {
+                url: '/about',
+                name: 'Diensten'
+            },
+            {
+                url: '/about',
+                name: 'Partners'
+            },
+            {
+                url: '/about',
+                name: 'About'
+            },
+        ]
+    }
+})
+
+const main = new Vue({
+    el: '#main',
     data: {
         // Infomratie
         product: 'Socks',
@@ -24,32 +52,3 @@ const app = new Vue({
 
     }
 })
-
-const nav = new Vue({
-    el: '#nav',
-    data: {
-        // Header image
-        logo: './assets/sock.jpeg',
-
-        navigaion: [
-            {
-                url: '/',
-                name: 'Home'
-            },
-            {
-                url: '/about',
-                name: 'Diensten'
-            },
-            {
-                url: '/about',
-                name: 'Partners'
-            },
-            {
-                url: '/about',
-                name: 'About'
-            },
-        ]
-    }
-})
-
-// Nav
