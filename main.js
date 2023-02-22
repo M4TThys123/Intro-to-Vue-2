@@ -22,6 +22,10 @@ const nav = new Vue({
                 url: '/about',
                 name: 'About'
             },
+            {
+                url: '/Joep',
+                name: 'Joep'
+            },
         ]
     }
 })
@@ -48,7 +52,17 @@ const main = new Vue({
                 Id: 0,
                 Color: 'Blue'
             }
-        ]
+        ],
 
+        // Winkelwagen
+        cart: 0,
+    },
+
+    // De methods moet buiten het data:{} object staan
+    methods: {
+        addToCart: function () {
+            console.log('Deze core dunt')
+            this.cart += 1
+        }
     }
 })
