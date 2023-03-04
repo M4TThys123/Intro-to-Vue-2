@@ -1,3 +1,16 @@
+Vue.component('message', {
+    props: {
+        message: {
+            type: String,
+            required: true,
+            default: "Hi"
+        }
+    },
+    template: ``,
+    data() {
+
+    }
+}),
 Vue.component('product', {
     template: `
       <div class="product">
@@ -126,7 +139,7 @@ const nav = new Vue({
     el: '#nav',
     data: {
         // Logo
-        logo: './assets/logo/nav_light.png',
+        logo: './assets/logo/Orderli.png',
 
         // Nav list
         navigaion: [

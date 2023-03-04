@@ -10,10 +10,13 @@ body {
     margin: 0px;
 }
 
+ul{
+    margin-bottom: 0;
+}
 /* Nav */
 .nav-bar {
     background: linear-gradient(-90deg, #84CF6A, #16C0B0);
-    height: 60px;
+    height: 5em;
     margin-bottom: 15px;
 
     display: flex;
@@ -21,7 +24,10 @@ body {
     align-items: center;
 
     color: #fff;
-    padding: 10px;
+}
+.nav-img{
+    width: 110px;
+    height: 35px;
 }
 nav ul {
     display: flex;
