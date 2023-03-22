@@ -11,7 +11,14 @@ Vue.component('message', {
 
     }
 }),
+
 Vue.component('product', {
+    props: {
+        premium: {
+            type: Boolean,
+            required: true,
+        }
+    },
     template: `
       <div class="product">
       <!--        Product image-->
@@ -30,6 +37,7 @@ Vue.component('product', {
           <p v-if="inventory > 10">In Stock</p>
           <p v-else-if="inventory <= 10 && inventory > 0">Almost Sold Out!</p>
           <p v-else>Out of stock</p>
+          <p>Shipping is: {{ shipping }}</p>
         </div>
 
         <div>
@@ -131,16 +139,14 @@ Vue.component('product', {
         },
         inStock() {
             return this.variants[this.selectedVariant].variantQuantity
-        }
+        },
+
     }
 })
 
 const nav = new Vue({
     el: '#nav',
     data: {
-        // Logo
-        logo: './assets/logo/Orderli.png',
-
         // Nav list
         navigaion: [
             {
